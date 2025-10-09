@@ -44,7 +44,8 @@ createplatform(200,100,100,10);
 
 
     // TODO 3 - Create Collectables
-createCollectable(kennedi,700,350);
+createCollectable("kennedi",700,350);
+
 
 
     
