@@ -44,12 +44,11 @@ createplatform(200,100,100,10);
 
 
     // TODO 3 - Create Collectables
-createCollectable('diamond', 700, 350)
+createCollectable('diamond', 700, 350);
+createCollectable('max',300,550);
+creatCollectable('kenndei',200 ,100);
 
-
-
-    
-    // TODO 4 - Create Cannons
+ // TODO 4 - Create Cannons
 
 
     
