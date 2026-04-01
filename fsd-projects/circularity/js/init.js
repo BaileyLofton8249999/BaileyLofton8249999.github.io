@@ -20,7 +20,7 @@ var init = function (window) {
         ///////////////////
         
         // TODO 1 : Declare and initialize our variables
-var circles
+var circle
 var circles=[]
 
 
@@ -33,7 +33,6 @@ var circles=[]
               view.addChild(circle);
 
               circles.push(circle);
-
        
      }   
 
@@ -61,21 +60,22 @@ var circles=[]
         */
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
+
  for (var i = 0; i < circles.length; i++) {
 
                physikz.updatePosition(circles[i]);
 
 
+
+
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           for (var i = 0; i < circles.length; i++) {
+          game.checkCirclePosition(circles[i]);
 
-               physikz.updatePosition(circles[i]);
+ }
+            
 
 
-               game.checkCirclePosition(circles[i]);
-
-}
 
 
 
@@ -92,9 +92,9 @@ var circles=[]
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = 0;
-            }
+         if(circle.x > canvas.width){
+            circle.x=0;
+         }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
              else if (circle.x < 0) {
@@ -110,7 +110,6 @@ var circles=[]
                 circle.y = canvas.height;
 
             }
-
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
